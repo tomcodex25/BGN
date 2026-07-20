@@ -386,6 +386,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
+
+    // Success Stories Section Scroll Triggers
+    gsap.fromTo('.story-image-wrapper',
+        { x: -60, opacity: 0, scale: 0.98 },
+        {
+            x: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1.4,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: '.stories-section',
+                start: 'top 75%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+    gsap.fromTo('.story-content-card',
+        { x: 60, opacity: 0, scale: 0.98 },
+        {
+            x: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1.4,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: '.stories-section',
+                start: 'top 75%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+    gsap.fromTo('.story-timeline-item',
+        { y: 30, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.25,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: '.stories-section',
+                start: 'top 65%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+
     // 7. Atmospheric Storm System (Mazhai, Minnal, Iddi Audio/Flash controls)
     let audioPlaying = false;
     const rainAudio = new Audio('https://raw.githubusercontent.com/bradtraversy/ambient-sound-mixer/main/audio/rain.mp3');
