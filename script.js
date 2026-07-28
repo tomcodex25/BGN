@@ -509,29 +509,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     startLightningLoop();
 
-    // 8. FAQ Accordion Interaction
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-        const answer = item.querySelector('.faq-answer');
-        
-        item.addEventListener('click', () => {
-            const isActive = item.classList.contains('active');
-            
-            // Close all other items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                    otherItem.querySelector('.faq-answer').style.maxHeight = null;
-                }
-            });
-            
-            // Toggle active state
-            item.classList.toggle('active', !isActive);
-            if (!isActive) {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            } else {
-                answer.style.maxHeight = null;
-            }
-        });
-    });
 });
