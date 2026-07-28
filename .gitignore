@@ -1,1 +1,9 @@
 .vercel
+*.zip
+*.exe
+BlueStacksInstaller*
+VoicemeeterSetup*
+MSI-APP-Player*
+.vercelignore
+ChatGPT*
+*removebg-preview.png
