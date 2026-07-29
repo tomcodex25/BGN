@@ -967,3 +967,31 @@ section {
         top: 0;
     }
 }
+
+/* --- Brand Logo Styles --- */
+.logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.hero-logo-wrapper {
+    margin-bottom: 2.2rem;
+}
+
+.hero-logo-img {
+    height: 160px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 35px rgba(20, 184, 166, 0.15);
+}
+
+.footer-logo-img {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+}
