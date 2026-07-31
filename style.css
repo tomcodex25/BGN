@@ -995,3 +995,164 @@ section {
     display: block;
     margin-bottom: 1.5rem;
 }
+
+
+/* --- Interactive Report Components --- */
+.chart-card-wrapper {
+    background: rgba(13, 18, 32, 0.6);
+    border: 1px solid var(--color-card-border);
+    backdrop-filter: blur(16px);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.chart-canvas-container {
+    position: relative;
+    width: 100%;
+    height: 360px;
+}
+
+.stat-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin: 2rem 0;
+}
+
+.stat-card-item {
+    background: rgba(13, 18, 32, 0.5);
+    border: 1px solid var(--color-card-border);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.stat-card-item .stat-num {
+    font-family: var(--font-data);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+}
+
+.stat-card-item .stat-num.teal { color: var(--color-accent-teal); }
+.stat-card-item .stat-num.red { color: #ef4444; }
+.stat-card-item .stat-num.gold { color: var(--color-accent-gold); }
+
+.stat-card-item .stat-lbl {
+    font-size: 0.8rem;
+    color: var(--color-text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* 15/16-Day Surrender Engine */
+.engine-flow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.engine-step-card {
+    background: rgba(13, 18, 32, 0.5);
+    border: 1px solid var(--color-card-border);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    position: relative;
+}
+
+.engine-step-card.active-trigger {
+    border-color: var(--color-accent-gold);
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.engine-step-num {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(20, 184, 166, 0.15);
+    border: 2px solid var(--color-accent-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-data);
+    font-weight: 700;
+    color: var(--color-accent-teal);
+    margin-bottom: 1.2rem;
+}
+
+.engine-step-card.active-trigger .engine-step-num {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: var(--color-accent-gold);
+    color: var(--color-accent-gold);
+}
+
+/* Comparison Cards */
+.diff-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.diff-card {
+    background: rgba(13, 18, 32, 0.5);
+    border: 1px solid var(--color-card-border);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+}
+
+.diff-card.diff-alert {
+    border-color: rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.04);
+}
+
+/* Political Duel Section */
+.political-duel-wrapper {
+    background: rgba(13, 18, 32, 0.7);
+    border: 1px solid var(--color-card-border);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    margin: 3rem 0;
+}
+
+.political-toggle-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pol-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--color-card-border);
+    color: var(--color-text-gray);
+    transition: all 0.3s ease;
+}
+
+.pol-btn.active-dmk {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #ffffff;
+}
+
+.pol-btn.active-tvk {
+    background: var(--color-accent-teal);
+    border-color: var(--color-accent-teal);
+    color: var(--color-bg-primary);
+}
+
+@media (max-width: 1024px) {
+    .stat-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .engine-flow-grid { grid-template-columns: 1fr; }
+    .diff-grid-2 { grid-template-columns: 1fr; }
+}
